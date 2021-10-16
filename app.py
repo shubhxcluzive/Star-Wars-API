@@ -1,5 +1,6 @@
+import flask
 from flask import Flask, request, json
-from bson.json_util import dumps
+from bson.json_util import dumps, loads
 import requests, re
 from datetime import datetime
 import pymongo
@@ -23,7 +24,11 @@ def get_planets():
     page = int(request.args.get("page", 1))
     per_page = 10
     res = planets_collection.find().sort('name').skip(per_page * (page - 1)).limit(per_page)
-    return dumps(list(res))
+    response = app.response_class(
+        response=dumps(res),
+        status=200,
+        mimetype='application/json')
+    return response
 
 @app.route('/api/planets/<name>', methods=["GET"])
 def get_planet_byname(name):
