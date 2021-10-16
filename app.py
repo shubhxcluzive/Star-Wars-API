@@ -7,7 +7,7 @@ import dns
 
 app = Flask(__name__)
 
-client = pymongo.MongoClient('mongodb+srv://starwarz:starwarz143@starwars.niitn.mongodb.net/test')
+client = pymongo.MongoClient(os.environ.get(star_war_db_key))
 db = client['StarWars']
 movies_collection = db['movies']
 planets_collection = db['planets']
@@ -23,8 +23,7 @@ def return_to_json(data):
 
 @app.route('/')
 def home_page():
-    return "Welcome to Star Warz \n" \
-           "are you ready"
+    return "Welcome to Star Warz"
 
 
 @app.route('/api/planets', methods=["GET"])
