@@ -18,7 +18,7 @@ Resonse: Info of all planets
 2. Endpoint : /api/planets/<name>
 Query parameter: name (name takes the name of the planet)
 Method: GET
-Response: Returns the creation date, last updation date, is_favourite
+Response: Returns the creation date, last updation date, is_favourite.
 
 3. Endpoint: /api/planets/favourite
 Method: GET
