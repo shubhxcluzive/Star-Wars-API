@@ -11,15 +11,11 @@ app = Flask(__name__)
 
 - Additionally, the list APIs must support searching by title/name
 
-
-
 '''
 client = pymongo.MongoClient('mongodb+srv://starwarz:starwarz143@starwars.niitn.mongodb.net/test')
 db = client['StarWars']
 movies_collection = db['movies']
 planets_collection = db['planets']
-
-
 
 @app.route('/api/planets', methods=["GET"])
 def get_planets():
@@ -64,11 +60,19 @@ def set_planet_favourite():
         planets_collection.update_one(search, updated_values)
     return dumps(planets_collection.find({"name":name}))
 
+@app.route('/api/planets/favourite', methods=['GET'])
+def get_planet_favourite():
+    page = int(request.args.get("page", 1))
+    per_page = 10
+    res = planets_collection.find({'is_favourite': True}).sort('name').skip(per_page * (page - 1)).limit(per_page)
+    return dumps(res)
+
+
 @app.route('/api/movies/favourite', methods=['PUT'])
 def set_movie_favourite():
-    title = request.args.get("title").title()
+    title = request.args.get("title")
     isSet = request.args.get("favourite", "true")
-    search = {"title": title}
+    search = {"title": re.compile(title, re.IGNORECASE)}
     movie = list(movies_collection.find(search))[0]
     if isSet.lower() == "true":
         if movie['is_favourite'] == True:
@@ -80,9 +84,14 @@ def set_movie_favourite():
             return dumps({"message": "Movie is already set to as favourite False"})
         updated_values = {"$set": {'is_favourite': False, 'updated': str(datetime.now())}}
         movies_collection.update_one(search, updated_values)
-    return dumps(movies_collection.find({"title":title}))
+    return dumps(movies_collection.find({"title":re.compile(title, re.IGNORECASE)}))
 
-
+@app.route('/api/movies/favourite', methods=['GET'])
+def get_movie_favourite():
+    page = int(request.args.get("page", 1))
+    per_page = 10
+    res = movies_collection.find({'is_favourite': True}).sort('title').skip(per_page * (page - 1)).limit(per_page)
+    return dumps(res)
 
 
 
