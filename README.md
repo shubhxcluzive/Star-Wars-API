@@ -1,5 +1,4 @@
 # Star-Wars-API
-# Star-Wars
 
 SpotDraft Star Wars Backend assignment:
 A Favourites app that exposes REST APIs for Star Wars data. 
