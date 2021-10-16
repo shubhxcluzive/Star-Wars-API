@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, json
 from bson.json_util import dumps
 import requests, re
 from datetime import datetime
@@ -19,10 +19,11 @@ planets_collection = db['planets']
 
 @app.route('/api/planets', methods=["GET"])
 def get_planets():
+    #planets_collection.update_many({}, {"$set": {"custom_name": ""}})
     page = int(request.args.get("page", 1))
     per_page = 10
     res = planets_collection.find().sort('name').skip(per_page * (page - 1)).limit(per_page)
-    return dumps(res)
+    return dumps(list(res))
 
 @app.route('/api/planets/<name>', methods=["GET"])
 def get_planet_byname(name):
