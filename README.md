@@ -15,22 +15,48 @@ Endpoints for planets:
 1. Endpoint: /api/planets 
 Method: GET
 Resonse: Info of all planets
+
 2. Endpoint : /api/planets/<name>
 Query parameter: name (name takes the name of the planet)
-Response: Returns the creation date, last updation date, is favourite
-Method: PUT
+Method: GET
+Response: Returns the creation date, last updation date, is_favourite
+
 3. Endpoint: /api/planets/favourite
+Method: GET
+Response: Returns all planets which are set as favourite by user
+    
+ 4. Endpoint: /api/planets/favourite
+Method: PUT
+Query parameters:
+    favourite :(set as True or False)
+    custome_name: if users wants to set a custom name for planet
+Response: Returns all planets which are set as favourite by user
 
 Endpoints for movies:
 1. Endpoint: /api/movies 
 Method: GET
-Resonse: Info of all planets
-2. Endpoint : /api/movies/<title>
-3. Endpoint :/api/movies/favourite
+Resonse: Info of all movies
 
+2. Endpoint : /api/movies/<name>
+Query parameter: name (name takes the name of the planet)
+Method: GET
+Response: Returns the release date, last updation date, created_date, is_favourite
+
+3. Endpoint: /api/movies/favourite
+Method: GET
+Response: Returns all movies which are set as favourite by user
+    
+ 4.3. Endpoint: /api/movies/favourite
+Method: PUT
+Query parameters:
+    favourite :(set as True or False)
+    custome_name: if users wants to set a custom name for movie
+Response: Returns all movies which are set as favourite by user
+    
+    
 Insertion of data into MongoDB:
 
-movies_url = "https://swapi.dev/api/films/"
+    movies_url = "https://swapi.dev/api/films/"
 response = requests.get(movies_url)
 data = response.json()
 temp_list = []
