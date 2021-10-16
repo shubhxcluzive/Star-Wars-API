@@ -50,7 +50,7 @@ Method: PUT
 Query parameters:
     favourite :(set as True or False)
     custome_name: if users wants to set a custom name for movie
-Response: Returns all movies which are set as favourite by user
+Response: Returns all movies which are set as favourite by user.
     
     
 Insertion of data into MongoDB:
