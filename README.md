@@ -12,8 +12,7 @@ The JSON api used is https://swapi.dev/.<br>
 Endpoints for planets:<br>
 1. Endpoint: <i>/api/planets</i> <br>
 <b>Method</b>: GET<br>
-<b>Response</b>: Info of all planets<br><br>
-
+<b>Response</b>: Info of all planets<br>
 2. Endpoint:  <i>/api/planets/{name}<br></i>
 <b>Query parameter</b>: name (name takes the name of the planet)<br>
 <b>Method</b>: GET<br>
