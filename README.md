@@ -12,7 +12,7 @@ The JSON api used is https://swapi.dev/.<br>
 Endpoints for planets:<br>
 1. Endpoint: <i>/api/planets</i> <br>
 <b>Method</b>: GET<br>
-<b>Resonse</b>: Info of all planets<br><br>
+<b>Response</b>: Info of all planets<br><br>
 
 2. Endpoint:  <i>/api/planets/{name}<br></i>
 <b>Query parameter</b>: name (name takes the name of the planet)<br>
@@ -33,7 +33,7 @@ Endpoints for planets:<br>
 <h6>Endpoints for movies:</h6>
 1. Endpoint: <i>/api/movies <br></i>
 <b>Method:</b> GET<br>
-<b>Resonse:</b> Info of all movies<br><br>
+<b>Response:</b> Info of all movies<br><br>
 
 2. Endpoint :<i> /api/movies/<name></i><br>
 <b>Query parameter:</b> name (name takes the name of the planet)<br>
