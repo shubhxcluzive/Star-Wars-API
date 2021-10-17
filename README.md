@@ -30,7 +30,7 @@ Endpoints for planets:<br>
     custom_name: if users wants to set a custom name for planet<br>
 <b>Response:</b> Returns all planets which are set as favourite by user<br><br>
 
-<h6>Endpoints for movies:</h6>
+Endpoints for movies:<br>
 <li> Endpoint: <i>/api/movies </i></li><br>
 <b>Method:</b> GET<br>
 <b>Response:</b> Info of all movies<br><br>
