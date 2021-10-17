@@ -10,19 +10,20 @@ The JSON api used is https://swapi.dev/.<br>
 
 <h3>Endpoints</h3>
 Endpoints for planets:<br>
-1. Endpoint: <i>/api/planets</i> <br>
+<ol>
+<li>Endpoint: <i>/api/planets</i></li>
 <b>Method</b>: GET<br>
-<b>Response</b>: Info of all planets<br>
-2. Endpoint:  <i>/api/planets/{name}<br></i>
+<b>Response</b>: Info of all planets</li><br><br>
+<li> Endpoint:  <i>/api/planets/{name}<br></i></li>
 <b>Query parameter</b>: name (name takes the name of the planet)<br>
 <b>Method</b>: GET<br>
 <b>Response</b>: Returns the creation date, last updation date, is_favourite.<br><br>
 
-3. Endpoint: <i>/api/planets/favourite<br></i>
+<li> Endpoint: <i>/api/planets/favourite<br></i> </li>
 <b>Method:</b> GET<br>
 <b>Response:</b> Returns all planets which are set as favourite by user<br><br>
     
- 4. Endpoint: <i>/api/planets/favourite<br></i>
+ <li> Endpoint: <i>/api/planets/favourite<br></i></li>
 <b>Method:</b> PUT<br>
 <b>Query parameters:</b><br>
     favourite :(set as True or False)<br>
@@ -30,20 +31,20 @@ Endpoints for planets:<br>
 <b>Response:</b> Returns all planets which are set as favourite by user<br><br>
 
 <h6>Endpoints for movies:</h6>
-1. Endpoint: <i>/api/movies <br></i>
+<li> Endpoint: <i>/api/movies </i></li><br>
 <b>Method:</b> GET<br>
 <b>Response:</b> Info of all movies<br><br>
 
-2. Endpoint :<i> /api/movies/<name></i><br>
+<li> Endpoint :<i> /api/movies/<name></i></li><br>
 <b>Query parameter:</b> name (name takes the name of the planet)<br>
 <b>Method:</b> GET<br>
 <b>Response:</b> Returns the release date, last updation date, created_date, is_favourite<br><br>
 
-3. Endpoint: <i>/api/movies/favourite<br></i>
+<li> Endpoint: <i>/api/movies/favourite</li></i><br>
 <b>Method:</b> GET<br>
 <b>Response:</b> Returns all movies which are set as favourite by user<br><br>
     
- 4. Endpoint: <i>/api/movies/favourite<br></i>
+<li> Endpoint: <i>/api/movies/favourite</i></li><br>
 <b>Method:</b> PUT<br>
 <b>Query parameters:</b><br>
     favourite :(set as True or False)<br>
