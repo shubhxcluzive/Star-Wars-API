@@ -3,13 +3,12 @@
 SpotDraft Star Wars Backend assignment:<br>
 A Favourites app that exposes REST APIs for Star Wars data. <br>
 You can find my project live at: https://starwarz-backend-api.herokuapp.com/ <br>
-
 The JSON api used is https://swapi.dev/.<br>
 <h6>Language & Framework used: Python, Flask</h6>
 <h6>Database: Mongodb atlas<br></h6>
 
 <h3>Endpoints</h3>
-Endpoints for planets:<br>
+<h6>Endpoints for planets:</h6>
 <ol>
 <li>Endpoint: <i>/api/planets</i></li>
 <b>Method</b>: GET<br>
@@ -30,7 +29,7 @@ Endpoints for planets:<br>
     custom_name: if users wants to set a custom name for planet<br>
 <b>Response:</b> Returns all planets which are set as favourite by user<br><br>
 
-Endpoints for movies:<br>
+<h6>Endpoints for movies:</h6>
 <li> Endpoint: <i>/api/movies </i></li>
 <b>Method:</b> GET<br>
 <b>Response:</b> Info of all movies<br><br>
@@ -49,7 +48,7 @@ Endpoints for movies:<br>
 <b>Query parameters:</b><br
     favourite :(set as True or False)<br>
     custom_name: if users wants to set a custom name for movie<br>
-Response: Returns all movies which are set as favourite by user.<br><br>
+Response: Returns all movies which are set as favourite by user.<br><br></ol>
     
 <h6>Insertion of data into MongoDB:</h6>
 
