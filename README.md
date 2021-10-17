@@ -23,7 +23,7 @@ Endpoints for planets:<br>
 <b>Method:</b> GET<br>
 <b>Response:</b> Returns all planets which are set as favourite by user<br><br>
     
- <li> Endpoint: <i>/api/planets/favourite<br></i></li>
+ <li> Endpoint: <i>/api/planets/favourite</i></li>
 <b>Method:</b> PUT<br>
 <b>Query parameters:</b><br>
     favourite :(set as True or False)<br>
@@ -31,22 +31,22 @@ Endpoints for planets:<br>
 <b>Response:</b> Returns all planets which are set as favourite by user<br><br>
 
 Endpoints for movies:<br>
-<li> Endpoint: <i>/api/movies </i></li><br>
+<li> Endpoint: <i>/api/movies </i></li>
 <b>Method:</b> GET<br>
 <b>Response:</b> Info of all movies<br><br>
 
-<li> Endpoint :<i> /api/movies/<name></i></li><br>
+<li> Endpoint :<i> /api/movies/<name></i></li>
 <b>Query parameter:</b> name (name takes the name of the planet)<br>
 <b>Method:</b> GET<br>
 <b>Response:</b> Returns the release date, last updation date, created_date, is_favourite<br><br>
 
-<li> Endpoint: <i>/api/movies/favourite</li></i><br>
+<li> Endpoint: <i>/api/movies/favourite</li></i>
 <b>Method:</b> GET<br>
 <b>Response:</b> Returns all movies which are set as favourite by user<br><br>
     
-<li> Endpoint: <i>/api/movies/favourite</i></li><br>
+<li> Endpoint: <i>/api/movies/favourite</i></li>
 <b>Method:</b> PUT<br>
-<b>Query parameters:</b><br>
+<b>Query parameters:</b><br
     favourite :(set as True or False)<br>
     custom_name: if users wants to set a custom name for movie<br>
 Response: Returns all movies which are set as favourite by user.<br><br>
