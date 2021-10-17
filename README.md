@@ -5,8 +5,7 @@ A Favourites app that exposes REST APIs for Star Wars data. <br>
 You can find my project live at: https://starwarz-backend-api.herokuapp.com/ <br>
 The JSON api used is https://swapi.dev/.<br>
 <h6>Language & Framework used: Python, Flask</h6>
-<h6>Database: Mongodb atlas<br></h6>
-
+<h6>Database: Mongodb atlas</h6>
 <h3>Endpoints</h3>
 <h6>Endpoints for planets:</h6>
 <ol>
